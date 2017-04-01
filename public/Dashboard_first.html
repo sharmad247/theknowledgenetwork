@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TKN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="sear.css" rel="stylesheet">
+    <script type="text/javascript" src="inf_Val.js"></script>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">The Knowledge Network</a>
+        </div>
+
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+            <div class="nav navbar-nav">
+                <div class="col-md-12 col-md-offset-5">
+                    <div class="input-group" id="adv-search">
+                        <input type="text" class="form-control" placeholder="Search for snippets" />
+                        <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                                <div class="dropdown dropdown-lg">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <label for="filter">Filter by</label>
+                                                <select class="form-control">
+                                                    <option value="0" selected>Any</option>
+                                                    <option value="1">Author</option>
+                                                    <option value="2">Title</option>
+                                                    <option value="3">Citations</option>
+                                                    <option value="4">Most commented</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="SearchFor">Search For</label>
+                                                <select class="form-control">
+                                                    <option value="0" selected>Everything</option>
+                                                    <option value="1">Title</option>
+                                                    <option value="2">Author</option>
+                                                    <option value="3">Synopsis</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Keywords">Keywords</label>
+                                                <input class="form-control" type="text" />
+                                            </div>
+                                            <button type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+        <fieldset>
+
+
+            <h1>A Few More Details!</h1>
+
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">First Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" >Last Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Phone</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input name="phone" placeholder="8275890773" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Address</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input name="address" placeholder="Address" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">City</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input name="city" placeholder="city" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">State</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select name="state" class="form-control selectpicker" >
+                            <option value=" " >Please select your state</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                            <option value="Daman and Diu">Daman and Diu</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Orissa">Orissa</option>
+                            <option value="Pondicherry">Pondicherry</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttaranchal">Uttaranchal</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="West Bengal">West Bengal</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Pincode</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input name="zip" placeholder="Pin Code" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Published Papers</label>
+                <div class="col-md-4">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="published" value="yes" /> Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="published" value="no" /> No
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Links of Published Papers</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                        <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+</div>
+
+
+<footer class="container-fluid text-center">
+    <p>An Innitiative by HRD</p>
+</footer>
+
+
+</body>
+</html>
