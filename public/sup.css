@@ -2,10 +2,10 @@
 
 body {
 
-  background:#e6ffff;
+  background:#666666;
   color:#666666;
   font-family: 'Roboto', sans-serif;
-  font-weight:400;
+  font-weight:100;
 }
 
 body{
@@ -14,6 +14,26 @@ body{
   -webkit-animation: HeroBG 20s ease infinite;
           animation: HeroBG 20s ease infinite;
 }
+
+body::before {
+  background: url("https://i1.wp.com/blog.privatewifi.com/wp-content/uploads/2013/11/stethoscope.keyboard.jpg");
+  content: '';
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;=
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+
 
 @-webkit-keyframes HeroBG {
   0% {
@@ -41,10 +61,11 @@ body{
 
 
 .panel {
-  border-radius: 15px;
+  border-radius: 5px;
+  background-color:#ffffff
 }
 label {
-  font-weight: 600;
+  font-weight: 300;
 }
 .panel-login {
    border: none;
@@ -72,15 +93,14 @@ label {
   height: 17px;
   left: 0;
   margin-left: 0px;
-  border: 1px solid #595959;
-  border-radius: 4px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
   background-color: #fff;
   -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 .panel-login .checkbox label::after {
-  border:1px;
   display: inline-block;
   position: absolute;
   width: 16px;
@@ -116,12 +136,12 @@ label {
 .panel-login>.panel-heading {
   color: #848c9d;
   background-color: #e8e9ec;
-  border-color: #0d0d0d;
+  border-color: #fff;
   text-align:center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   border-bottom: 0px;
   padding: 0px 15px;
 }
@@ -134,14 +154,14 @@ label {
 }
 .panel-login>.panel-heading .register {
   padding: 20px 30px;
-  background: #2d3b55;
+  background: #4d4d4d;
   border-bottom-right-radius: 5px;
 }
 .panel-login>.panel-heading a{
   text-decoration: none;
-  color: #404040;
-  font-weight: 700;
-  font-size: 20px;
+  color: #666;
+  font-weight: 300;
+  font-size: 16px;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   transition: all 0.1s linear;
@@ -158,7 +178,7 @@ label {
 
 .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
   height: 45px;
-  border: 1px;
+  border: 0;
   font-size: 16px;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
@@ -178,9 +198,9 @@ label {
   border-color: #ccc;
 }
 .btn-login {
-  background-color: #E8E9EC;
+  background-color: #999999;
   outline: none;
-  color: #2D3B55;
+  color: #fff;
   font-size: 14px;
   height: auto;
   font-weight: normal;
@@ -193,7 +213,7 @@ label {
 .btn-login:hover,
 .btn-login:focus {
   color: #fff;
-  background-color: #2D3B55;
+  background-color: #000000;
 }
 .forgot-password {
   text-decoration: underline;
@@ -206,9 +226,9 @@ label {
 }
 
 .btn-register {
-  background-color: #E8E9EC;
+  background-color: #666666;
   outline: none;
-  color: #2D3B55;
+  color: #ffffff;
   font-size: 14px;
   height: auto;
   font-weight: normal;
@@ -221,9 +241,5 @@ label {
 .btn-register:hover,
 .btn-register:focus {
   color: #fff;
-  background-color: #2D3B55;
-}
-.navbar-header{
-font-size:30px;
-font-wieght:700;
+  background-color: #000000;
 }
