@@ -1,0 +1,15 @@
+{
+  "name": "tkn",
+  "version": "0.0.1",
+  "description": "Smart India Hackathon 2017 project of  Team ICU",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "*",
+    "express-validator": "*"
+  },
+  "author": "Saheel Wagh",
+  "license": "ISC"
+}
