@@ -68,7 +68,7 @@
             zip: {
                 validators: {
                     notEmpty: {
-                        message: 'Please supply your PinCOde'
+                        message: 'Please supply your PinCode'
                     },
                     zipCode: {
                         country: 'India',
@@ -98,4 +98,3 @@
             }, 'json');
         });
 });
-
