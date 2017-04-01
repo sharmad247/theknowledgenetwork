@@ -1,13 +1,22 @@
-//import express
 var express = require("express");
 var app = express();
-//set port number
+var pubmed = require('./pubmed')
+const util = require('util');
+
+
 var port = process.env.port || 3000;
- //import path module for serving static files
- var path = require("path");
+var path = require("path");
 
- //usse express's static middleware to serve files from the directory public.
- app.use(express.static('public'));
+app.use(express.static('public'));
+app.get('/authors', function(req, res){
+	pubmed.findAuthorsWithTopic(req.query.topic, function(result){
+		res.send(result);
+	});
+})
 
-  app.listen(port);
-  console.log("Server running at http://localhost:" + port);
+app.listen(port);
+console.log("Server running at http://localhost:" + port);
+
+pubmed.findAuthorsWithTopic('cancer', function(x){
+     console.log(util.inspect(x, false, null))
+})
