@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="sear.css" rel="stylesheet">
 </head>
+
 <body>
+
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -25,13 +28,63 @@
                 <li><a href="signin.html">Login</a></li>
                 <li><a href="search.html">Search</a></li>
             </ul>
+            <div class="nav navbar-nav">
+                <div class="col-md-12 col-md-offset-5">
+                    <div class="input-group" id="adv-search">
+                        <input type="text" class="form-control" placeholder="Search for snippets" />
+                        <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                                <div class="dropdown dropdown-lg">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <label for="filter">Filter by</label>
+                                                <select class="form-control">
+                                                    <option value="0" selected>Any</option>
+                                                    <option value="1">Author</option>
+                                                    <option value="2">Title</option>
+                                                    <option value="3">Citations</option>
+                                                    <option value="4">Most commented</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="SearchFor">Search For</label>
+                                                <select class="form-control">
+                                                    <option value="0" selected>Everything</option>
+                                                    <option value="1">Title</option>
+                                                    <option value="2">Author</option>
+                                                    <option value="3">Synopsis</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Keywords">Keywords</label>
+                                                <input class="form-control" type="text" />
+                                            </div>
+                                            <button type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </nav>
 
-<div>
-    <h1>This is the search page</h1>
-</div>
+
+
+
+
+
+<<footer class="container-fluid text-center">
+    <p>An Innitiative by HRD</p>
+</footer>
+
 
 </body>
 </html>
