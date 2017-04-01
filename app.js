@@ -2,6 +2,7 @@ var express = require("express");
 var bodyparser = require('body-parser');
 var app = express();
 var pubmed = require('./pubmed')
+var db = require('./db')
 const util = require('util');
 
 
@@ -16,19 +17,25 @@ app.get('/authors', function(req, res){
 	pubmed.findAuthorsWithTopic(req.query.topic, function(result){
 		res.send(result);
 	});
-})
+});
 
 app.get('/login', function(req,res){
     res.sendFile(path.join(__dirname, 'public', 'signin.html'));
-})
+});
 
 app.post('/login', function(req,res){
-    console.log(req.body);
-})
+    db.validate(req.body.username, req.body.password, function(flag) {
+        if(flag){
+            res.redirect('/');
+        }
+        else {
+            console.log("Bad cred")
+            res.redirect('/login');
+        }
+    });
 
-app.get('/success', function(req,res){
-    res.sendfile(path.join(__dirname, 'public', 'index.html'));
-})
+});
+
 
 app.listen(port);
 console.log("Server running at http://localhost:" + port);
