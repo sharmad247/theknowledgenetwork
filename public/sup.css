@@ -2,10 +2,10 @@
 
 body {
 
-  background:#666666;
+  background:#e6ffff;
   color:#666666;
   font-family: 'Roboto', sans-serif;
-  font-weight:100;
+  font-weight:400;
 }
 
 body{
@@ -41,10 +41,10 @@ body{
 
 
 .panel {
-  border-radius: 5px;
+  border-radius: 15px;
 }
 label {
-  font-weight: 300;
+  font-weight: 600;
 }
 .panel-login {
    border: none;
@@ -72,14 +72,15 @@ label {
   height: 17px;
   left: 0;
   margin-left: 0px;
-  border: 1px solid #cccccc;
-  border-radius: 3px;
+  border: 1px solid #595959;
+  border-radius: 4px;
   background-color: #fff;
   -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 .panel-login .checkbox label::after {
+  border:1px;
   display: inline-block;
   position: absolute;
   width: 16px;
@@ -115,12 +116,12 @@ label {
 .panel-login>.panel-heading {
   color: #848c9d;
   background-color: #e8e9ec;
-  border-color: #fff;
+  border-color: #0d0d0d;
   text-align:center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border-bottom: 0px;
   padding: 0px 15px;
 }
@@ -138,9 +139,9 @@ label {
 }
 .panel-login>.panel-heading a{
   text-decoration: none;
-  color: #666;
-  font-weight: 300;
-  font-size: 16px;
+  color: #404040;
+  font-weight: 700;
+  font-size: 20px;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   transition: all 0.1s linear;
@@ -157,7 +158,7 @@ label {
 
 .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
   height: 45px;
-  border: 0;
+  border: 1px;
   font-size: 16px;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
@@ -221,4 +222,8 @@ label {
 .btn-register:focus {
   color: #fff;
   background-color: #2D3B55;
+}
+.navbar-header{
+font-size:30px;
+font-wieght:700;
 }
