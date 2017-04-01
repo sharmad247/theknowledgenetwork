@@ -10,84 +10,81 @@
     <link href="car.css" rel="stylesheet">
     <link href="sear.css" rel="stylesheet">
 </head>
-
 <body>
 
 
+
 <nav class="navbar navbar-inverse">
-<div class="container-fluid">
+    <div class="container-fluid">
 
 
-    <div class="navbar-header">
-        <a href="index.html" class="navbar-brand">The Knowledge Network</a>
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">The Knowledge Network</a>
+        </div>
+
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="signin.html">Login</a></li>
+            </ul>
+        </div>
     </div>
+</nav>
 
-    <div>
-        <ul class="nav navbar-nav navbar-right">
-
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="signin.html">Login</a></li>
-        </ul>
-        <div class="nav navbar-nav">
-            <div class="col-md-12 col-md-offset-5">
-                <div class="input-group" id="adv-search">
-                    <input type="text" class="form-control" placeholder="Enter Search Terms" />
-                    <div class="input-group-btn">
-                        <div class="btn-group" role="group">
-                            <div class="dropdown dropdown-lg">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                                <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                    <form class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <label for="filter">Filter by</label>
-                                            <select class="form-control">
-                                                <option value="0" selected>Any</option>
-                                                <option value="1">Author</option>
-                                                <option value="2">Title</option>
-                                                <option value="3">Citations</option>
-                                                <option value="4">Most commented</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="SearchFor">Search For</label>
-                                            <select class="form-control">
-                                                <option value="0" selected>Everything</option>
-                                                <option value="1">Title</option>
-                                                <option value="2">Author</option>
-                                                <option value="3">Synopsis</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="Keywords">Keywords</label>
-                                            <input class="form-control" type="text" />
-                                        </div>
-                                        <button type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                    </form>
+<div class="jumbotron vertical-center">
+    <div class="container-fluid">
+        <h2>THE KNOWLEDGE NETWORK</h2>
+        <p>A powerful network to connect ICMR officers to leading biomedical experts!</p>
+        <div class="input-group" id="adv-search">
+            <input type="text" class="form-control" placeholder="Search For A Paper!" />
+            <div class="input-group-btn">
+                <div class="btn-group" role="group">
+                    <div class="dropdown dropdown-lg">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                        <div class="dropdown-menu dropdown-menu-right" role="menu">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label for="filter">Filter by</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>Any</option>
+                                        <option value="1">Author</option>
+                                        <option value="2">Title</option>
+                                        <option value="3">Citations</option>
+                                        <option value="4">Most commented</option>
+                                    </select>
                                 </div>
-                            </div>
-                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                <div class="form-group">
+                                    <label for="SearchFor">Search For</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>Everything</option>
+                                        <option value="1">Title</option>
+                                        <option value="2">Author</option>
+                                        <option value="3">Synopsis</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Keywords">Keywords</label>
+                                    <input class="form-control" type="text" />
+                                </div>
+                                <button type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </form>
                         </div>
                     </div>
+                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </div>
             </div>
         </div>
-
-    </div>
-</div>
-</nav>
-
-<div class="jumbotron">
-    <div class="container text-center">
-        <h1>The Knowledge Network</h1>
-        <p>A powerful network to connect ICMR officers to leading biomedical experts!</p>
     </div>
 </div>
 
-<div class="row">
+
+
+<div class="row" id="CAR">
     <div class="col-lg-4 col-lg-offset-1">
         <div id="INFO1" class="carousel slide" data-ride="carousel">
-<h>                       For ICMR Officers</h>
+            <h>                       For ICMR Officers</h>
             <ol class="carousel-indicators">
                 <li data-target="#INFO1" data-slide-to="0" class="active"></li>
                 <li data-target="#INFO1" data-slide-to="1"></li>
@@ -104,7 +101,6 @@
                 <div class="item">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Topic Search</h1>
                             <p>Search for the topic & identify subject experts.</p>
 
                         </div>
@@ -177,10 +173,7 @@
     </div>
 </div>
 
-<<footer class="container-fluid text-center">
-    <p>An initiative by ICMR</p>
-</footer>
-
-
 </body>
+
+
 </html>
