@@ -23,4 +23,4 @@ var port = 3000;
   });
 
   app.listen(3000);
-  console.log("Hello World!");
+  console.log("Server running at http://localhost:3000");
