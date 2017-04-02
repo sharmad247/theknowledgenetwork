@@ -44,14 +44,14 @@
         <div class="bg"></div>
         <h2>THE KNOWLEDGE NETWORK</h2>
         <p>A powerful network to connect ICMR officers to leading<br>biomedical experts!</p>
+        <form method="post" action="/authors" class="form-horizontal" role="form">
         <div class="input-group" id="adv-search">
-            <input type="text" class="form-control" placeholder="Search For A Paper!" />
+            <input name="topic" type="text" class="form-control" placeholder="Search For A Paper!" />
             <div class="input-group-btn">
                 <div class="btn-group" role="group">
                     <div class="dropdown dropdown-lg">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                         <div class="dropdown-menu dropdown-menu-right" role="menu">
-                            <form method="post" action="/authors" class="form-horizontal" role="form">
                                 <div class="form-group">
                                     <label for="searchfor">Databaser</label>
                                     <select name="database" class="form-control">
@@ -113,10 +113,11 @@
                                         <option value="pub+date">Data</option>
                                     </select>
                                 </div>
-                                <button name="button1" type="submit" class="btn default" action="/authors"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                <button name="button1" type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                             </div>
-                            <button name="button2" type="submit" class="btn btn-default" action="/authors"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            <button name="button2" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                         </form>
+
                     </div>
                 </div>
             </div>
