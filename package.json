@@ -7,11 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "*",
     "express-validator": "*",
+    "mysql": "^2.13.0",
     "request": "^2.81.0",
     "xml2js": "^0.4.17"
   },
   "author": "Saheel Wagh",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }
