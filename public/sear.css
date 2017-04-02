@@ -1,8 +1,23 @@
-body {
-    font-size: 200%;
 
 
-}
+
+.navbar{
+    background-color: #999999;
+    border-color: #808080;
+ }
+
+ .nav.navbar-nav li a {
+    color: #fff;
+  }
+
+ .nav.navbar-nav a:hover {
+  color: black;
+ }
+
+ .navbar-default .navbar-brand{
+    color: #fff;
+ }
+
 .dropdown.dropdown-lg .dropdown-menu {
     margin-top: -1px;
     padding: 6px 20px;
