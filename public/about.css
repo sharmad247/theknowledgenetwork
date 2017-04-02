@@ -1,3 +1,27 @@
-body{background-color: #d9d9d9;
+body::before {
+  background: url("https://jacquiegartonsmith.files.wordpress.com/2013/10/stethoscope-and-keyboard-royalty-free-frpm-stockunlimited-for-the-waiting-room.jpg");
+  content: '';
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;=
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 
+#inf{
+
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+body{
+     font-weight: bold;
+     color: #000000
 }
