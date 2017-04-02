@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TKN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="sear.css" rel="stylesheet">
+    <link href="glob.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">The Knowledge Network</a>
+        </div>
+
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="signin.html">Login</a></li>
+            </ul>
+            <div class="nav navbar-nav">
+                <div class="col-md-12 col-md-offset-5">
+                    <div class="input-group" id="adv-search">
+                        <input type="text" class="form-control" placeholder="Search for snippets" />
+                        <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                                <div class="dropdown dropdown-lg">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <label for="filter">Filter by</label>
+                                                <select class="form-control">
+                                                    <option value="0" selected>Any</option>
+                                                    <option value="1">Author</option>
+                                                    <option value="2">Title</option>
+                                                    <option value="3">Citations</option>
+                                                    <option value="4">Most commented</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="SearchFor">Search For</label>
+                                                <select class="form-control">
+                                                    <option value="0" selected>Everything</option>
+                                                    <option value="1">Title</option>
+                                                    <option value="2">Author</option>
+                                                    <option value="3">Synopsis</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Keywords">Keywords</label>
+                                                <input class="form-control" type="text" />
+                                            </div>
+                                            <button type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+<div class="row">
+
+    <form>
+        <div class="col-lg-8 col-lg-offset-2">
+            <textarea class="form-control" rows="1" id="query"></textarea>
+        </div>
+        <button type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-5">
+        <h3>Matches Found!</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-2" id="RadioB">
+
+        <div class="checkbox">
+            <label><input type="checkbox" value="">Indian Authors</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="optradio">Show Related Authors</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="optradio">Show Related Instuttions</label>
+        </div>
+    </div>
+
+
+    <div   class="col-lg-8" class="list-group"  id="RES">
+
+        <ul style="list-style:none;  " class="pagination ">
+            <% for(var i=0;i<25;i++) { %>
+                <li>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading"><%= title %></h4>
+                        <span class="badge badge-default badge-pill">14</span>
+                        <p class="list-group-item-text"><%= synopsis %></p>
+                    </a>
+                </li>
+            <% } %>
+
+
+        </ul>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+</body>
+</html>

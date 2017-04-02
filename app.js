@@ -1,12 +1,21 @@
 var express = require("express");
 var bodyparser = require('body-parser');
-var app = express();
-var pubmed = require('./pubmed')
-var db = require('./db')
+var pubmed = require('./pubmed');
+var db = require('./db');
+var ejs = require('ejs');
 const util = require('util');
 
 var port = process.env.PORT || 3000;
 var path = require("path");
+var app = express();
+
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname,'views'));
+app.get('/search',function(req,res){
+    res.render('search', {title: "Chemical analysis of protiens",
+                            synopsis : "ejfejfeojfoef"
+                            });
+})
 
 app.use(bodyparser.urlencoded({extended: true}));
 

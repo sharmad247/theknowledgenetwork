@@ -1,27 +1,10 @@
-body::before {
-  background: url("research.jpg");
-  content: '';
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  position:absolute;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;=
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
-}
-
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 #inf{
-
+        font-size: 200%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 body{
-     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
      color: #000000
 }
