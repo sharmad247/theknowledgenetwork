@@ -75,8 +75,28 @@ function authorListToAuthor(authorList) {
     }
 }
 
+function isALetter(c) {
+    var value = c.charCodeAt(0)
+    return (value >= 65 && value <= 90) || (value >= 97 && value <= 122)
+}
+
+function removeFullStop(word) {
+    var lastCharacter = word.charAt(word.length - 1)
+    if (!isALetter(lastCharacter))
+        return word.substring(0, word.length - 1)
+    else
+        return word 
+}
+
+function isInIndia(text) {
+    var arr = text.split(' ')
+    var arr2 = arr.map(removeFullStop)
+
+    return arr2.indexOf('India') > -1
+}
+
 function indianAuthor(o) {
-    return o.affliation.indexOf('India') > -1;
+    return isInIndia(o.affliation);
 }
 
 function findAuthorsWithTopic(topic, database, sort, done) {
