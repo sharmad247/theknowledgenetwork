@@ -19,11 +19,11 @@ function getText(node) {
         return node
 }
 
-function fetchAbstracts(ids, done) {
+function fetchAbstracts(ids, database, sort, done) {
     var idString = ids.join(',');
     var parser = new xml2js.Parser();
 
-    request(pubmedBase + '/efetch.fcgi?db=pubmed&id='+ idString + '&retmode=xml&rettype=abstract', function(error, reponse, body){
+    request(pubmedBase + '/efetch.fcgi?db='+ database +'&id='+ idString + '&retmode=xml&rettype=abstract', function(error, reponse, body){
         var result = parser.parseString(body, function(err, result){
             // console.log(util.inspect(result, false, null))
             done(result);
@@ -70,29 +70,29 @@ function authorListToAuthor(authorList) {
     } catch(err) {
         return {
             name : '',
-            affliation: '' 
+            affliation: ''
         }
     }
 }
 
 function indianAuthor(o) {
-    return o.affliation.indexOf('India') > -1;   
+    return o.affliation.indexOf('India') > -1;
 }
 
-function findAuthorsWithTopic(topic, done) {
+function findAuthorsWithTopic(topic, database, sort, done) {
     search(topic, function(ids) {
         if(ids.length === undefined || ids.length < 1) {
             console.log("No articles found");
             done([]);
         } else {
-            fetchAbstracts(ids, function(abs){
+            fetchAbstracts(ids, database, sort, function(abs){
                 result = [];
                 try {
                     result = abs.PubmedArticleSet.PubmedArticle.map(articleToAuthorList).map(authorListToAuthor).filter(indianAuthor);
                 } catch (err) {
                     console.error(err);
                 }
-                done(result); 
+                done(result);
             });
         }
     });

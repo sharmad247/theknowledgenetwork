@@ -44,84 +44,85 @@
         <div class="bg"></div>
         <h2>THE KNOWLEDGE NETWORK</h2>
         <p>A powerful network to connect ICMR officers to leading<br>biomedical experts!</p>
-        <form method="post" action="/authors" class="form-horizontal" role="form">
+
         <div class="input-group" id="adv-search">
-            <input name="topic" type="text" class="form-control" placeholder="Search For A Topic!" />
+
+            <input form="searchform" name="topic" type="text" class="form-control" placeholder="Search For A Paper!" />
             <div class="input-group-btn">
                 <div class="btn-group" role="group">
                     <div class="dropdown dropdown-lg">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                         <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <div class="form-group">
-                                    <label for="searchfor">Databaser</label>
-                                    <select name="database" class="form-control">
-                                        <option value="pubmed">pubmed</option>
-                                        <option value="protein">protein</option>
-                                        <option value="nuccore">nuccore</option>
-                                        <option value="nucleotide">nucleotide</option>
-                                        <option value="nucgss">nucgss</option>
-                                        <option value="nucest">nucest</option>
-                                        <option value="structure">structure</option>
-                                        <option value="sparcle">sparcle</option>
-                                        <option value="genome">genome</option>
-                                        <option value="annotinfo">annotinfo</option>
-                                        <option value="assembly">assembly</option>
-                                        <option value="bioproject">bioproject</option>
-                                        <option value="biosample">biosample</option>
-                                        <option value="blastdbinfo">blastdbinfo</option>
-                                        <option value="books">books</option>
-                                        <option value="cdd">cdd</option>
-                                        <option value="clinvar">clinvar</option>
-                                        <option value="clone">clone</option>
-                                        <option value="gap">gap</option>
-                                        <option value="gapplus">gapplus</option>
-                                        <option value="grasp">grasp</option>
-                                        <option value="dbvar">dbvar</option>
-                                        <option value="gene">gene</option>
-                                        <option value="gds">gds</option>
-                                        <option value="geoprofiles">geoprofiles</option>
-                                        <option value="homologene">homologene</option>
-                                        <option value="medgen">medgen</option>
-                                        <option value="mesh">mesh</option>
-                                        <option value="ncbisearch">ncbisearch</option>
-                                        <option value="nlmcatalog">nlmcatalog</option>
-                                        <option value="omim">omim</option>
-                                        <option value="orgtrack">orgtrack</option>
-                                        <option value="pmc">pmc</option>
-                                        <option value="popset">popset</option>
-                                        <option value="probe">probe</option>
-                                        <option value="proteincluster">proteinclusters</option>
-                                        <option value="pcassay">pcassay</option>
-                                        <option value="biosystems">biosystems</option>
-                                        <option value="pcccompound">pccompound</option>
-                                        <option value="pcsubstance">pcsubstance</option>
-                                        <option value="pubmedhealth">pubmedhealth</option>
-                                        <option value="sequannot">seqannot</option>
-                                        <option value="snp">snp</option>
-                                        <option value="sra">sra</option>
-                                        <option value="taxonomy">taxonomy</option>
-                                        <option value="unigene">unigene</option>
-                                        <option value="gencoll">gencoll</option>
-                                        <option value="gtr">gtr</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="filter">Filter by</label>
-                                    <select name="sort" class="form-control">
-                                        <option selected>Relevance</option>
-                                        <option value="first+author">Author</option>
-                                        <option value="pub+date">Data</option>
-                                    </select>
-                                </div>
-                                <button name="button1" type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            <form id="searchform" method="post" action="/authors" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="searchfor">Database</label>
+                                <select name="database" class="form-control">
+                                    <option value="pubmed">pubmed</option>
+                                    <option value="protein">protein</option>
+                                    <option value="nuccore">nuccore</option>
+                                    <option value="nucleotide">nucleotide</option>
+                                    <option value="nucgss">nucgss</option>
+                                    <option value="nucest">nucest</option>
+                                    <option value="structure">structure</option>
+                                    <option value="sparcle">sparcle</option>
+                                    <option value="genome">genome</option>
+                                    <option value="annotinfo">annotinfo</option>
+                                    <option value="assembly">assembly</option>
+                                    <option value="bioproject">bioproject</option>
+                                    <option value="biosample">biosample</option>
+                                    <option value="blastdbinfo">blastdbinfo</option>
+                                    <option value="books">books</option>
+                                    <option value="cdd">cdd</option>
+                                    <option value="clinvar">clinvar</option>
+                                    <option value="clone">clone</option>
+                                    <option value="gap">gap</option>
+                                    <option value="gapplus">gapplus</option>
+                                    <option value="grasp">grasp</option>
+                                    <option value="dbvar">dbvar</option>
+                                    <option value="gene">gene</option>
+                                    <option value="gds">gds</option>
+                                    <option value="geoprofiles">geoprofiles</option>
+                                    <option value="homologene">homologene</option>
+                                    <option value="medgen">medgen</option>
+                                    <option value="mesh">mesh</option>
+                                    <option value="ncbisearch">ncbisearch</option>
+                                    <option value="nlmcatalog">nlmcatalog</option>
+                                    <option value="omim">omim</option>
+                                    <option value="orgtrack">orgtrack</option>
+                                    <option value="pmc">pmc</option>
+                                    <option value="popset">popset</option>
+                                    <option value="probe">probe</option>
+                                    <option value="proteincluster">proteinclusters</option>
+                                    <option value="pcassay">pcassay</option>
+                                    <option value="biosystems">biosystems</option>
+                                    <option value="pcccompound">pccompound</option>
+                                    <option value="pcsubstance">pcsubstance</option>
+                                    <option value="pubmedhealth">pubmedhealth</option>
+                                    <option value="sequannot">seqannot</option>
+                                    <option value="snp">snp</option>
+                                    <option value="sra">sra</option>
+                                    <option value="taxonomy">taxonomy</option>
+                                    <option value="unigene">unigene</option>
+                                    <option value="gencoll">gencoll</option>
+                                    <option value="gtr">gtr</option>
+                                </select>
                             </div>
+                            <div class="form-group">
+                                <label for="filter">Filter by</label>
+                                <select name="sort" class="form-control">
+                                    <option selected>Relevance</option>
+                                    <option value="first+author">Author</option>
+                                    <option value="pub+date">Data</option>
+                                </select>
+                            </div>
+                            <button name="button1" type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        </div>
                             <button name="button2" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                        </form>
-
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 

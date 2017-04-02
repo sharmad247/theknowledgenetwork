@@ -17,8 +17,10 @@ app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.post('/authors', function(req, res){
     var r = req.body.topic;
-	pubmed.findAuthorsWithTopic(r, function(result){
-		res.render('search', {'authors': result});
+    var database = req.body.database;
+    var sort = req.body.sort;
+	pubmed.findAuthorsWithTopic(r, database, sort, function(result){
+        res.render('search', {'authors': result});
 	});
 });
 
