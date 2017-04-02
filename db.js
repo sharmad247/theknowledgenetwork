@@ -1,7 +1,11 @@
 var mysql = require('mysql');
+
+var MYSQL_HOST = process.env.MYSQL_HOST || 'localhost';
+var MYSQL_PORT = process.env.MYSQL_PORT || 8889;
+
 var connection = mysql.createConnection({
-    host: 'localhost',
-    port: 8889,
+    host: MYSQL_HOST,
+    port: MYSQL_PORT,
     user: 'admin',
     password: 'admin',
     database: 'icmr'
