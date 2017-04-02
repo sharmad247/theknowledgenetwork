@@ -12,8 +12,10 @@ var path = require("path");
 app.use(bodyparser.urlencoded({extended: true}));
 
 app.use(express.static('public'));
-app.get('/authors', function(req, res){
-	pubmed.findAuthorsWithTopic(req.query.topic, function(result){
+app.post('/authors', function(req, res){
+    var r = req.body.topic;
+    console.log(r);
+	pubmed.findAuthorsWithTopic(r, function(result){
 		res.send(result);
 	});
 });

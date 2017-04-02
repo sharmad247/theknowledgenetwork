@@ -37,15 +37,14 @@
     <div class="container-fluid">
         <h2>THE KNOWLEDGE NETWORK</h2>
         <p>A powerful network to connect ICMR officers to leading biomedical experts!</p>
+        <form class="form-horizontal" role="form" action="/authors" method="post">
         <div class="input-group" id="adv-search">
-            <input type="text" class="form-control" placeholder="Search For A Paper!" />
+            <input id="param" name="topic" type="text" class="form-control" placeholder="Search For A Paper!" />
             <div class="input-group-btn">
                 <div class="btn-group" role="group">
                     <div class="dropdown dropdown-lg">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                        <div class="dropdown-menu dropdown-menu-right" role="menu">
-                            <form class="form-horizontal" role="form">
-                                <div class="form-group">
+                        <!-- <div class="dropdown-menu dropdown-menu-right" role="menu"> -->
+                                <!-- <div class="form-group">
                                     <label for="filter">Filter by</label>
                                     <select class="form-control">
                                         <option value="0" selected>Any</option>
@@ -67,12 +66,12 @@
                                 <div class="form-group">
                                     <label for="Keywords">Keywords</label>
                                     <input class="form-control" type="text" />
-                                </div>
-                                <button type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                </div> -->
+                                <!-- <button type="submit" class="btn default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button> -->
+                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                             </form>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </div>
             </div>
         </div>
@@ -84,7 +83,7 @@
 <div class="row" id="CAR">
     <div class="col-lg-4 col-lg-offset-1">
         <div id="INFO1" class="carousel slide" data-ride="carousel">
-            <h>                       For ICMR Officers</h>
+            <h>For ICMR Officers</h>
             <ol class="carousel-indicators">
                 <li data-target="#INFO1" data-slide-to="0" class="active"></li>
                 <li data-target="#INFO1" data-slide-to="1"></li>
