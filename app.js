@@ -13,7 +13,6 @@ app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.post('/authors', function(req, res){
     var r = req.body.topic;
-    console.log(r);
 	pubmed.findAuthorsWithTopic(r, function(result){
 		res.send(result);
 	});
