@@ -4,8 +4,9 @@
   "description": "Smart India Hackathon 2017 project of  Team ICU",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "preinstall": "npm install pm2 -g",
+    "start": "pm2 start --attach app.js"
+   },
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "*",
