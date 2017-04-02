@@ -11,11 +11,6 @@ var app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname,'views'));
-app.get('/search',function(req,res){
-    res.render('search', {title: "Chemical analysis of protiens",
-                            synopsis : "ejfejfeojfoef"
-                            });
-})
 
 app.use(bodyparser.urlencoded({extended: true}));
 
@@ -23,7 +18,7 @@ app.use(express.static('public'));
 app.post('/authors', function(req, res){
     var r = req.body.topic;
 	pubmed.findAuthorsWithTopic(r, function(result){
-		res.send(result);
+		res.render('search', {'authors': result});
 	});
 });
 

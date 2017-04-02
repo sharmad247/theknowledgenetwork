@@ -13,7 +13,7 @@
 
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inve3rse">
     <div class="container-fluid">
 
 
@@ -111,15 +111,21 @@
     <div   class="col-lg-8" class="list-group"  id="RES">
 
         <ul style="list-style:none;  " class="pagination ">
-            <% for(var i=0;i<25;i++) { %>
-                <li>
-                    <a href="#" class="list-group-item">
-                        <h4 class="list-group-item-heading"><%= title %></h4>
-                        <span class="badge badge-default badge-pill">14</span>
-                        <p class="list-group-item-text"><%= synopsis %></p>
-                    </a>
+            <% authors.forEach(function(author){ %>
+                <li> 
+                    <span class="list-group-item">
+                        <h4 class="list-group-item-heading"><%= author.title %></h4>
+                        <h4><%= author.name %></h4>
+                        <p class="list-group-item-text"><%= author.abstract %></p>
+                        <h4>
+                            <% if(author.emails.length > 0) { %>
+                                 Email: 
+                                <a href="mailto:<%= author.emails[0] %>"> <%= author.emails[0] %> </a>
+                              <%  } %>
+                        </h4>
+                    </span>
                 </li>
-            <% } %>
+            <% }) %>
 
 
         </ul>
