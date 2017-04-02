@@ -6,7 +6,7 @@ var db = require('./db')
 const util = require('util');
 
 
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 var path = require("path");
 
 app.use(bodyparser.urlencoded({extended: true}));
