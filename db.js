@@ -2,14 +2,9 @@ var mysql = require('mysql');
 
 var MYSQL_HOST = process.env.MYSQL_HOST || 'localhost';
 var MYSQL_PORT = process.env.MYSQL_PORT || 8889;
+var MYSQL_URL = process.env.CLEARDB_DATABASE_URL || 'mysql://admin:admin@' + MYSQL_HOST + ':' + MYSQL_PORT + '/icmr';
 
-var connection = mysql.createConnection({
-    host: MYSQL_HOST,
-    port: MYSQL_PORT,
-    user: 'admin',
-    password: 'admin',
-    database: 'icmr'
-});
+var connection = mysql.createConnection(MYSQL_URL);
 
 connection.connect(function(err) {
   if (err) {
