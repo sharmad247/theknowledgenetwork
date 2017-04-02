@@ -5,6 +5,10 @@ const util = require('util');
 const pubmedBase = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils'
 
 function search(term, done) {
+    if(term === undefined || term.length == 0) {
+        done([])
+        return;
+    }
     var query = term.split(' ').join('+')
     request(pubmedBase + '/esearch.fcgi?db=pubmed&term='+ encodeURIComponent(query) +'&reldate=60&datetype=edat&retmax=500&usehistory=y&retmode=JSON', function (error, response, body) {
         var result = JSON.parse(body);
